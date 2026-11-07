@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: CarTest
     steps:
       - uses: actions/checkout@v4
 
@@ -25,4 +28,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: CarTest-apk
-          path: app/build/outputs/apk/debug/*.apk
+          path: CarTest/app/build/outputs/apk/debug/*.apk
